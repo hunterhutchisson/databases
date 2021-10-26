@@ -1,0 +1,36 @@
+-- CREATE TABLE restaurant (
+--     id SERIAL NOT NULL PRIMARY KEY,
+--     name varchar,
+--     distance integer,
+--     stars integer,
+--     category varchar,
+--     favorite_dish varchar,
+--     takeout boolean,
+--     last_time_eaten date
+-- )
+
+-- INSERT INTO restaurant VALUES
+-- (DEFAULT, 'oishii', 0.3, 5, 'sushi', 'sakura roll', TRUE, '2021-09-01'),
+-- (DEFAULT, 'thai cottage', 0.6, 4, 'thai', 'chicken pad thai', TRUE, '2021-08-25'),
+-- (DEFAULT, '100% taquito', 0.6, 5, 'mexican', 'asadad quesadilla', TRUE, '2021-10-15'),
+-- (DEFAULT, 'local foods', 1.7, 4, 'american', 'crunchy chicken', TRUE, '2021-08-07'),
+-- (DEFAULT, 'pit room', 2.4, 3.5, 'bbq', 'brisket', TRUE, '2021-07-15');
+
+-- SELECT name FROM restaurant WHERE stars = 5;
+-- SELECT favorite_dish FROM restaurant WHERE stars = 5;
+-- SELECT id FROM restaurant WHERE name = 'local foods';
+-- SELECT * FROM restaurant WHERE category = 'bbq';
+-- SELECT * FROM restaurant WHERE takeout = TRUE;
+-- SELECT * FROM restaurant WHERE takeout = TRUE and category = 'bbq';
+-- SELECT * FROM restaurant WHERE distance < 2;
+-- SELECT * FROM restaurant WHERE last_time_eaten <= '2021-10-18';
+-- SELECT * FROM restaurant WHERE last_time_eaten <= '2021-10-18' and stars = 5;
+
+-- SELECT * FROM restaurant ORDER BY distance;
+-- SELECT * FROM restaurant ORDER BY distance LIMIT 2;
+-- SELECT * FROM restaurant ORDER BY stars DESC LIMIT 2;
+-- SELECT * FROM restaurant WHERE distance < 2 ORDER BY stars DESC LIMIT 2;
+-- SELECT COUNT(*) FROM restaurant;
+-- SELECT COUNT(*) FROM restaurant GROUP BY category;
+-- SELECT AVG(stars) FROM restaurant GROUP BY category;
+-- SELECT MAX(stars) FROM restaurant GROUP BY category;
